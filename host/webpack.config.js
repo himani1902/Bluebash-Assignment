@@ -47,12 +47,8 @@ module.exports = {
       name: 'host',
       filename: 'remoteEntry.js',
       remotes: {
-        chat_app: process.env.VERCEL_CHAT_URL
-          ? `chat_app@https://${process.env.VERCEL_CHAT_URL}/remoteEntry.js`
-          : 'chat_app@http://localhost:3001/remoteEntry.js',
-        email_app: process.env.VERCEL_EMAIL_URL
-          ? `email_app@https://${process.env.VERCEL_EMAIL_URL}/remoteEntry.js`
-          : 'email_app@http://localhost:3002/remoteEntry.js'
+        chat_app: 'chat_app@https://bluebash-assignment-pbb2-m831hzx9u-himanis-projects-8b28a1df.vercel.app/remoteEntry.js',
+        email_app: 'email_app@https://bluebash-assignment-lwey-6yhzt8wdf-himanis-projects-8b28a1df.vercel.app/remoteEntry.js'
       },
       exposes: {
         './design-system': './src/design-system/index.js',

@@ -1,0 +1,106 @@
+:root {
+  --color-bg: #0b1020;
+  --color-surface: #12172a;
+  --color-border: #26304b;
+  --color-muted: #94a3b8;
+  --color-text: #e2e8f0;
+  --color-primary: #4f46e5;
+  --color-primary-600: #4338ca;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.2), 0 6px 24px rgba(0,0,0,.3);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: radial-gradient(1200px 800px at 80% -10%, #1f2a44 0%, #0b1020 45%) no-repeat, var(--color-bg);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6);
+}
+
+.surface {
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+
+.row { display: flex; gap: var(--space-2); }
+.row-lg { display: flex; gap: var(--space-4); }
+.col { display: grid; gap: var(--space-3); }
+
+.text-muted { color: var(--color-muted); }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+}
+
+.badge {
+  padding: 8px 8px;
+  border-radius: 999px;
+  background: rgba(79,70,229,.15);
+  border: 1px solid rgba(79,70,229,.4);
+  color: #c7d2fe;
+  font-size: 12px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: rgba(255,255,255,.03);
+  color: var(--color-text);
+  cursor: pointer;
+}
+.btn:hover { border-color: #33518e; }
+.btn.primary {
+  background: linear-gradient(180deg, rgba(79,70,229,.9), rgba(79,70,229,.75));
+  border-color: var(--color-primary-600);
+}
+
+.tabs { display: flex; gap: var(--space-2); background: transparent; padding: var(--space-2); border-radius: var(--radius-sm); }
+.tab {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+.tab.active { color: var(--color-text); border-color: var(--color-border); background: rgba(255,255,255,.03); }
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: rgba(255,255,255,.02);
+  color: var(--color-text);
+}
+.card {
+  padding: var(--space-4);
+}
+.card h3 { margin: 0 0 var(--space-2) 0; }
+

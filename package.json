@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "assignment-react-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start:all": "concurrently \"cd host && npm start\" \"cd chat-app && npm start\" \"cd email-app && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
+
+
